@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>INFO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+*{
+	box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li 
+{
+  float: left;
+}
+
+li a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover
+{
+  background-color: #111;
+}
+
+
+.mySlides {display:none;}
+div 
+{
+	border : 5px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left : 10px;
+	margin-right : 10px;
+}
+
+h5
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left : 50px;
+	margin-right : 50px;
+}
+
+
+</style>
+
+<body>
+<ul>
+	<li><a class = "active" href="#home">HOME</a></li>
+	<li><a href ="#info">INFO</a></li>
+	<li><a href ="#donate">DONATE</a></li>
+</ul>
+
+
+
+<h2 class="w3-center">What We do</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_clean.jpg" style="width:100%">
+  <img class="mySlides" src="img_education.jpg" style="width:100%">
+  <img class="mySlides" src="img_whale.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<h5>The story begins when Alex and Andrew take a surf trip...
+to Bali Indonesia that would inevitably change their lives and the fate of the ocean. Devastated by the amount of plastic in the ocean, they set out to find out why no one was doing anything about it. One afternoon they came across an old fishing village where fishermen were literally pushing their boat through piles of plastic that had washed up on shore. The two surfers realized that the proliferation of plastic threatened both the ocean environment and the fishermen's livelihood. Could the fishermen use their nets, they wondered, to pull the plastic from the ocean? This idea stuck with the 2 surfers and they knew it was time to hit the drawing board. After realizing that the demand for seafood was driving the fishermen to focus on fish instead of plastic, they knew they had to create something that could fund the desired cleanup efforts. This is how the 4ocean Bracelet was born.
+
+
+Made with recycled materials, every bracelet purchased funds the removal of 1 pound of trash from the ocean and coastlines. In less than 2 years, 4ocean has removed 4,514,566 pounds of trash from the ocean and coastlines.
+
+
+4ocean currently operates out of multiple countries and employs over 150 people worldwide.</h5>
+
+
+<div class="row">
+  <div class="column">
+    <img src="img_face1.png" alt="1" style="width:50%">
+    <p>Steve</p>
+  </div>
+  <div class="column">
+    <img src="img_face2.png" alt="2" style="width:50%">
+    <p>Starasia</p>
+  </div>
+  <div class="column">
+    <img src="img_face1.png" alt="3" style="width:50%">
+    <p>Kyeore</p>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
+
