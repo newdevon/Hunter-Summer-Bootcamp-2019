@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 *{
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .column {
   float: left;
@@ -53,19 +53,26 @@ li a:hover
 .mySlides {display:none;}
 div 
 {
-	border : 5px solid black;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left : 10px;
-	margin-right : 10px;
+  border : 5px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left : 10px;
+  margin-right : 10px;
 }
 
 h5
 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left : 50px;
-	margin-right : 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left : 50px;
+  margin-right : 50px;
+}
+
+.bottom
+{
+  position: absolute;
+  left: 30%;
+  top: 90%;
 }
 
 
@@ -73,9 +80,9 @@ h5
 
 <body>
 <ul>
-	<li><a class = "active" href="#home">HOME</a></li>
-	<li><a href ="#info">INFO</a></li>
-	<li><a href ="#donate">DONATE</a></li>
+  <li><a class = "active" href="#home">HOME</a></li>
+  <li><a href ="#info">INFO</a></li>
+  <li><a href ="#donate">DONATE</a></li>
 </ul>
 
 
@@ -84,8 +91,10 @@ h5
 
 <div class="w3-content w3-display-container">
   <img class="mySlides" src="img_clean.jpg" style="width:100%">
+  <div class="bottom"> We clean the ocean, Educate people, and Save the whales.</div>
   <img class="mySlides" src="img_education.jpg" style="width:100%">
   <img class="mySlides" src="img_whale.jpg" style="width:100%">
+
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
