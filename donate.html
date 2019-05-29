@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<style>
+	nav {
+		height: 50px;
+		font-size: 20px;
+	}
+	
+	li {
+		float: left;
+		width: 33%;
+		border: none #ccc;
+		text-align: center;
+	}
+	 ul {
+		list-style: none;
+	}
+	
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		max-width: 40%; /*for resizing proportionally*/
+    	height:auto; /*for resizing proportionally*/
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 50px;
+	}
+
+	form {
+		font-size: 30px;
+		text-align: center;
+	}
+</style>
+
+<script> 
+	function closeForm() { //pop up box and closes the form
+		document.getElementById("demo1").innerHTML="WOO HOO";
+		window.alert("Donation is sucessful!");
+	}
+</script>
+
+<nav>
+	<ul>
+		<li>HOME</li>
+		<li>ABOUT</li>
+		<li>DONATE</li>
+	</ul>
+</nav>
+
+<h1> Donate </h1>
+
+<div>
+	<img src="ocean1.png">
+</div>
+
+<form id="demo1">
+	Full Name:<br>
+	<input type="text" name="firstname lastname" value="John Wick">
+	<br>
+	Email:<br>
+	<input type="text" name="email" value="johnwick@gmail.com">
+	<br>
+	How much would you like to donate?<br>
+	<input type="type" name="amount" value="$10">
+	<br>
+	
+	<button onclick="closeForm()" value="OK">Donate</button>
+</form>
+</html>
