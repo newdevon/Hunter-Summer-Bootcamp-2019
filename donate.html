@@ -36,6 +36,13 @@
 	}
 </style>
 
+<script> 
+	function closeForm() { //pop up box and closes the form
+		document.getElementById("demo1").innerHTML="WOO HOO";
+		window.alert("Donation is sucessful!");
+	}
+</script>
+
 <nav>
 	<ul>
 		<li>HOME</li>
@@ -50,7 +57,7 @@
 	<img src="ocean1.png">
 </div>
 
-<form>
+<form id="demo1">
 	Full Name:<br>
 	<input type="text" name="firstname lastname" value="John Wick">
 	<br>
@@ -60,6 +67,7 @@
 	How much would you like to donate?<br>
 	<input type="type" name="amount" value="$10">
 	<br>
-	<input type="submit" value="Submit">
+	
+	<button onclick="closeForm()" value="OK">Donate</button>
 </form>
 </html>
