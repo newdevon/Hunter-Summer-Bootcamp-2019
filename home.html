@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Donate</title>
+<title>Home</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +20,10 @@
 <style>
 /*------------ Structure ----------------*/
 #theNumber {
-  font-size: 500px;
+  font-size: 150px;
+  line-height: 0px;
   text-align: center;
+  color: red;
 }
 
 html, body { margin: 0; padding: 0 }
@@ -167,65 +169,64 @@ form
   <div class="sticky-content">
 
     <body onload = 'count()'>
-    <p id='theNumber'>0</p>
-            <script>
-                total = 0.0;
-                    speed = 100.0;
-                    cost = 18000000000;
-                    function count(){
-                        setInterval(function() {
-                            total = total + speed;
-                             document.getElementById('theNumber').innerHTML=addCommas(preciseRound(total,0));
-                         document.getElementById('numberSpeed').innerHTML=addCommas(preciseRound((speed*10),0)) + ' number per second';
-                            if (cost > total){
-                                document.getElementById('goFasterButton').setAttribute('disabled','disabled');
-                            }
-                            else if (cost <= total){
-                                document.getElementById('goFasterButton').removeAttribute('disabled');
-                            }
-                        }, 100);
-                    }
-                    function goFaster(){
-                        if (cost <= total) {
-                            total = total - cost;
-                            cost = cost * 2.32;
-                            speed = speed * 2;
-                            document.getElementById('numberCost').innerHTML=addCommas(preciseRound(cost,0));
-                        }
-                    }
-                    function preciseRound(n,d){
-                        return Math.round(n*Math.pow(10,d)) / Math.pow(10,d);
-                    }
-                    function addCommas(nStr)
-                    {
-                        nStr += '';
-                        x = nStr.split('.');
-                        x1 = x[0];
-                        x2 = x.length > 1 ? '.' + x[1] : '';
-                        var rgx = /(\d+)(\d{3})/;
-                        while (rgx.test(x1)) {
-                            x1 = x1.replace(rgx, '$1' + ',' + '$2');
-                        }
-                        return x1 + x2;
-                    }
-            </script> 
-            <p style = "text-align: bottom; font-size: 10px;">
-                Plastic pollution per year
-            </p>
+    <div class = "counter">
+      <p id='theNumber'>0
+        <p style = "text-align: center; font-size: 10px;">
+          Plastic pollution per year
         </p>
-  <video width = "100%" height="300" controls>
-      <source src="https://vp.nyt.com/video/hls/2019/03/18/80150_1_18vid-whale_wg/master.m3u8" type="video/mp4">
-  </video>
+      </p>
+    </div>
+        <script>
+            total = 0.0;
+                speed = 10000.0;
+                cost = 0;
+                function count(){
+                    setInterval(function() {
+                        total = total + speed;
+                         document.getElementById('theNumber').innerHTML=addCommas(preciseRound(total,0));
+                     document.getElementById('numberSpeed').innerHTML=addCommas(preciseRound((speed*10),0)) + ' number per second';
+                        if (cost > total){
+                            document.getElementById('goFasterButton').setAttribute('disabled','disabled');
+                        }
+                        else if (cost <= total){
+                            document.getElementById('goFasterButton').removeAttribute('disabled');
+                        }
+                    }, 100);
+                }
+                function goFaster(){
+                    if (cost <= total) {
+                        total = total - cost;
+                        cost = cost * 2.32;
+                        speed = speed * 20;
+                        document.getElementById('numberCost').innerHTML=addCommas(preciseRound(cost,0));
+                    }
+                }
+                function preciseRound(n,d){
+                    return Math.round(n*Math.pow(10,d)) / Math.pow(10,d);
+                }
+                function addCommas(nStr)
+                {
+                    nStr += '';
+                    x = nStr.split('.');
+                    x1 = x[0];
+                    x2 = x.length > 1 ? '.' + x[1] : '';
+                    var rgx = /(\d+)(\d{3})/;
+                    while (rgx.test(x1)) {
+                        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                    }
+                    return x1 + x2;
+                }
+        </script> 
+        </p>
+           <img src = "https://main-designyoutrust.netdna-ssl.com/wp-content/uploads/2017/05/1-62.jpg?iv=72" style = " display:block;">
+      <!-- <video width = "100%" height="300" controls>
+        <source src="https://vp.nyt.com/video/hls/2019/03/18/80150_1_18vid-whale_wg/master.m3u8" type="video/mp4">
+      </video> -->
   <p>
-    <img src = "https://www.mysuncoast.com/resizer/oNhvFSFMCeEa0nh43o34gS1lZNI=/1200x600/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/TX5O4LOU4VBOPKOYROBCZ4O2MY.JPG" style = "width: 50%; height: 300px;margin-right:15px; float: left;" >
+    <img src = "https://www.mysuncoast.com/resizer/oNhvFSFMCeEa0nh43o34gS1lZNI=/1200x600/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/TX5O4LOU4VBOPKOYROBCZ4O2MY.JPG" style = "width: 50%; height: 300px;margin-right:15px; margin-bottom: 15px; float: left;" >
     <h3> 88 Pounds of Plastic Found In Whale</h3>
     On the Davao Gulf in the Phillines, a whale spent his last moments vomiting blood. When he was bought back to the lab for a necropsy, nearly ninety pounds of plastic were pulled out of its belly! 
   </p>
-  <div class = "counter">
-        <p>
-           <img src = "https://main-designyoutrust.netdna-ssl.com/wp-content/uploads/2017/05/1-62.jpg?iv=72" style = "width: 50%; height: 300px;margin-right:15px; float: left;">
-    </div>
-
   </div>
 </div>
 <!-- Ends Content-->
